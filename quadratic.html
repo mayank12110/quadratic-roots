@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUADRATIC EQUATION</title>
+    
+</head>
+<body>
+<style>
+    body{
+        background-color: darkslategray;
+    }
+    h1{
+        color: blanchedalmond;
+        text-align: center;
+    }
+    .sc{
+        color: lightcoral;
+        text-align: center;
+        align-items: center;
+    }
+</style>
+<h1>  QUADRATIC ROOTS CALCULATOR:) </h1>
+<p id="fi" class="SC"></p>
+
+    <script>
+        let root1 , root2 ;
+        let a = prompt("enter first variable");
+        let b = prompt("enter second variable");
+        let c = prompt("enter third variable");
+        let D = b*b-(4*a*c);
+        if (D>0){
+              root1 = (-b+Math.sqrt(D))/(2*a);
+              root2 = (-b - Math.sqrt(D))/(2*a);
+            document.getElementById("fi").innerHTML=`The roots of quadratic equation are ${root1} and ${root2}`;
+        }
+        else if(D==0){
+           root1= root2 = -b/(2*a) ;
+           document.getElementById("fi").innerHTML= "first root ="+ root1 +"second root ="+root2;
+    
+        }
+        else{
+         let R = (-b/(2*a )).toFixed(2);
+         let I =  (Math.sqrt(-D)/(2*a)).toFixed(2);
+         document.getElementById("fi").innerHTML= `The roots of quadratic equation are ${R} + ${I}i and ${R} - ${I}i` ;
+}
+document.getElementById("fi").style.color = "black"; 
+document.getElementById("fi").style.fontSize = "30px"; 
+        
+    </script>
+</body>
+</html>
